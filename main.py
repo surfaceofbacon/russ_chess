@@ -9,4 +9,6 @@ Steps:
 2. Make pieces
 3. Place pieces on a board
 4. Play game
+
+
 """

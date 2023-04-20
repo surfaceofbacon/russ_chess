@@ -29,6 +29,7 @@ class Square:
             return f"{Style.DIM}[{self.position}{Style.RESET_ALL}]"
         else:
             return 'what are you doing bro'
+
     def __repr__(self):
         return str(self)
 
@@ -73,12 +74,18 @@ class Row:
         print(squares_string)
 
 
+
 def print_board():
     rows = [Row(num) for num in range(1, 9)]
     rows.reverse()
     for row in rows:
         row.print_row()
 
+
+"""
+from src.objects import Board
+my_board = Board()
+"""
 
 if __name__ == '__main__':
     print_board()
