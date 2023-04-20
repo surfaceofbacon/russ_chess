@@ -12,3 +12,11 @@ Steps:
 
 
 """
+chat = [
+    "Russ: i dont think i have a mic setup for this hold up",
+    "Wade: lol your discord status is prolly playin chess, nice"
+    "Russ: where is microphone settings lol"
+    "Russ: if you didnt know, you have weird static"
+    "Wade: My headset is acting up "
+    "Russ: Very cool :) "
+]
