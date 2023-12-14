@@ -119,7 +119,7 @@ class Board:
     def print_rows(self):
         for row in self.rows:
             row.print_row()
-        print('  [A  B  C  D  E  F  G  H]')
+        print('   A  B  C  D  E  F  G  H')
 
 
 def main():
