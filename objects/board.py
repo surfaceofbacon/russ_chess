@@ -25,7 +25,7 @@ SYMBOLS = {
 """
 
 
-PIECE_LOCATIONS = ['R', 'N', 'B', 'Q', 'K', 'B', 'N', 'R']
+PIECE_NOTATION = ['R', 'N', 'B', 'Q', 'K', 'B', 'N', 'R']
 
 
 class Square:
@@ -82,7 +82,7 @@ class Row:
 
         for column_num in range(8):
             if self.rownum in [1, 8]:
-                piece = PIECE_LOCATIONS[column_num]
+                piece = PIECE_NOTATION[column_num]
             elif self.rownum in [2, 7]:
                 piece = 'P'
             else:
@@ -122,10 +122,8 @@ class Board:
         print('   A  B  C  D  E  F  G  H')
 
 
-def main():
+def print_board():
     my_board = Board()
     my_board.print_rows()
 
 
-if __name__ == '__main__':
-    main()
