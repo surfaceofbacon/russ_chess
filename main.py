@@ -14,11 +14,11 @@ Steps:
 
 
 """
-
+my_board = board.Board()
 def main():
-    board.print_board()
-    game.get_move_from_user()
-
+    my_board.print_rows()
+    move = game.get_move_from_user()
+    game.process_move(move)
 
 
 if __name__ == '__main__':

@@ -10,6 +10,8 @@ Game
 """
 
 from objects import board
+import main
+
 def get_move_from_user():
     while True:
         move = input('Enter Move: ')
@@ -37,12 +39,25 @@ def get_move_from_user():
         if not check_column_and_row(column, row):
             continue
         if len(move) == 5:
-            second_column = move[3]
+            second_column = move[3].upper()
             second_row = int(move[4])
             if not check_column_and_row(second_column, second_row):
                 continue
-        print('Moved Piece')
-        break
+        return move
+
+def process_move(move: str):
+    columns = 'ABCDEFGH'
+    piece = move[0]
+    column_one = columns.index(move[1].upper())
+    row_one = abs(8 - int(move[2]))
+    column_two = columns.index(move[3].upper())
+    row_two = abs(8 - int(move[4]))
+    main.my_board.rows[row_one].squares[column_one] = '[ ]'
+    main.my_board.rows[row_two].squares[column_two] = f'[{piece.upper()}]'
+    main.my_board.print_rows()
+
+
+
 
 def check_column_and_row(column: str, row: int) -> bool:
     if column not in 'ABCDEFGH':
@@ -56,12 +71,3 @@ def check_column_and_row(column: str, row: int) -> bool:
 
 
 
-    """
-    
-    """
-"""
-print board
-ask player for a move
-do move
-
-"""

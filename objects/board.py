@@ -6,7 +6,7 @@ Board:
 from objects.pieces import SYMBOLS
 from colorama import init as colorama_init
 from colorama import Fore, Style
-
+from objects import pieces
 """
 Square
 * Color
@@ -85,6 +85,7 @@ class Row:
                 piece = PIECE_NOTATION[column_num]
             elif self.rownum in [2, 7]:
                 piece = 'P'
+
             else:
                 piece = None
 
@@ -122,8 +123,6 @@ class Board:
         print('   A  B  C  D  E  F  G  H')
 
 
-def print_board():
-    my_board = Board()
-    my_board.print_rows()
+
 
 
